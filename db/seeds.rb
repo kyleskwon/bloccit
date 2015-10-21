@@ -11,9 +11,9 @@ include RandomData
  posts = Post.all
 
  puts "#{Post.count}"
-    Post.find_or_create_by(
-      title: "Blue's clues",
-      body: "She's a clueless dog"
+    post = Post.find_or_create_by(
+      title: "My unique title",
+      body: "My unique body for a post"
       )
  puts "#{Post.count}"
 
@@ -28,9 +28,9 @@ include RandomData
  end
 
  puts "#{Comment.count}"
-    Comment.find_or_create_by(
-      post: posts.sample,
-      body: "She's a sweetheart"
+    comment = Comment.find_or_create_by(
+      post: post,
+      body: "My unique body for a comment"
       )
  puts "#{Comment.count}"
 
