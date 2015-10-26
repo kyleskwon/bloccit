@@ -25,13 +25,4 @@ module RandomData
       letters[0,rand(3..8)].join
     end
 
-    def random_copy
-    end
-
-    def random_price
-      numbers = (1..9).to_a
-      numbers.shuffle!
-      numbers[0,1].join + "." + numbers[2,3].join
-      #how to move decimal over two spaces left?
-    end
   end
