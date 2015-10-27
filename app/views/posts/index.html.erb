@@ -1,5 +1,13 @@
 <h1>All Posts</h1>
 
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to '<button type="button">New Post</button>'.html_safe, new_post_path %>
+    </h4>
+  </div>
+</div>
+
 <% @posts.each do |post| %>
   <div class="media">
     <div class="media-body">
