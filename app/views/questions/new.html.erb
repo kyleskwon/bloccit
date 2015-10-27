@@ -9,6 +9,7 @@
         <li>The incessant use of hashtags will get you banned.</li>
       </ul>
   </div>
+  
   <div class="col-md-8">
     <%= form_for @question do |f| %>
       <div class="form-group">
@@ -21,7 +22,7 @@
       </div>
       <div class="form-group">
         <%= f.label :resolved %>
-        <%= check_box(:resolved, method, options = {}, checked_value = "1", unchecked_value = "0") %>
+        <%= f.check_box :resolved %>
       </div>
       <div class="form-group">
         <%= f.submit "Save", class: 'btn btn-success' %>
