@@ -25,7 +25,7 @@ RSpec.describe PostsController, type: :controller do
       describe "GET new" do
         it "returns http success" do
           get :new, topic_id: my_topic.id
-          expect(response).to have_http_success(:success)
+          expect(response).to have_http_status(:success)
         end
 
         it "renders the #new view" do
