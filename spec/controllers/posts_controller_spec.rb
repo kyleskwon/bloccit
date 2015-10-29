@@ -4,8 +4,23 @@ include RandomData
 RSpec.describe PostsController, type: :controller do
 
     let (:my_topic) { Topic.create!(name:  RandomData.random_sentence, description: RandomData.random_paragraph) }
-
     let(:my_post) { my_topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
+
+      describe "POST create" do
+        it "increases the number of posts by 1" do
+          expect{post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}}.to change(Post,:count).by(1)
+        end
+
+        it "assigns Post.last to @post" do
+          post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}
+          expect(assigns(:post)).to eq Post.last
+        end
+
+        it "redirects to the new post" do
+          post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}
+          expect(response).to redirect_to [my_topic, Post.last]
+        end
+      end
 
       describe "GET show" do
          it "returns http success" do
@@ -36,22 +51,6 @@ RSpec.describe PostsController, type: :controller do
         it "instantiates @post" do
           get :new, topic_id: my_topic.id
           expect(assigns(:post)).not_to be_nil
-        end
-      end
-
-      describe "POST create" do
-        it "increases the number of Post by 1" do
-          expect{post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}}.to change(Post,:count).by(1)
-        end
-
-        it "assigns Post.last to @post" do
-          post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}
-          expect(assigns(:post)).to eq Post.last
-        end
-
-        it "redirects to the new post" do
-          post :create, topic_id: my_topic.id, post: {name: RandomData.random_sentence, description: RandomData.random_paragraph}
-          expect(response).to redirect_to [my_topic, Post.last]
         end
       end
 
