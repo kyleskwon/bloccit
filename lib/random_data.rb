@@ -28,7 +28,7 @@ module RandomData
     def random_number
       numbers = (1..9).to_a
       numbers.shuffle!
-      numberss[rand(1..9)]
+      numbers[rand(1..9)]
     end
 
   end

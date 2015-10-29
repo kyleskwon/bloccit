@@ -1,6 +1,4 @@
 class Topic < ActiveRecord::Base
-  has_many :posts
-  has_many :sponsoredposts
   has_many :posts, dependent: :destroy
-  has_many :sponsoredposts, dependent: :destroy
+  has_many :sponsored_posts, dependent: :destroy
 end
