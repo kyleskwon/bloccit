@@ -16,8 +16,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.user-info {
-  margin-top: 9px;
+.user-info-in {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.user-info-out {
+  margin-right: 5px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .nav {
