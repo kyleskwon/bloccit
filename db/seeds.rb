@@ -8,7 +8,7 @@ include RandomData
   password: RandomData.random_sentence
   )
 end
-user = User.all
+users = User.all
 
 #Create topics
 15.times do
@@ -33,7 +33,6 @@ posts = Post.all
 #Create Comments
 100.times do
   Comment.create!(
-    topic: topics.sample,
     post: posts.sample,
     body: RandomData.random_paragraph
     )
