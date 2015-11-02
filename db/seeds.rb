@@ -38,12 +38,18 @@ posts = Post.all
     )
 end
 
+admin = User.create!(
+   name:     'Admin User',
+   email:    'admin@example.com',
+   password: 'helloworld',
+   role:     'admin'
+ )
 
-user = User.first
-user.update_attributes!(
-  email: 'kskwon90@gmail.com',
-  password: 'helloworld'
-)
+ member = User.create!(
+   name:     'Member User',
+   email:    'member@example.com',
+   password: 'helloworld'
+ )
 
 puts "Seed finished"
 puts "#{User.count} users created"
