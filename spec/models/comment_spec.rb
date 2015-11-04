@@ -8,11 +8,11 @@ include RandomData
     let(:post) { topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user) }
     let(:comment) { Comment.create!(body: 'Comment Body', post: post, user: user) }
 
-    it { should belong_to(:post) }
-    it { should belong_to(:user) }
+     it { should belong_to(:post) }
+     it { should belong_to(:user) }
 
-    it { should validate_presence_of(:body) }
-    it { should validate_length_of(:body).is_at_least(5) }
+     it { should validate_presence_of(:body) }
+     it { should validate_length_of(:body).is_at_least(5) }
 
     describe "attributes" do
       it "should respond to body" do
