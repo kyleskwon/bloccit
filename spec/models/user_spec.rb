@@ -86,7 +86,6 @@ RSpec.describe User, type: :model do
          expect(user.admin?).to be_truthy
        end
      end
-
   end
 
 
