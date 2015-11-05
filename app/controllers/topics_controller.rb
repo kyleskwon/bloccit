@@ -4,7 +4,6 @@ class TopicsController < ApplicationController
   before_action :authorize_user_for_create, only: [:new, :create, :destroy]
   before_action :authorize_user_for_update, except: [:index, :show, :create, :destroy]
 
-
   def index
     @topics = Topic.all
   end
@@ -73,8 +72,8 @@ class TopicsController < ApplicationController
    end
 
    def authorize_user_for_update
-     unless current_user.admin?
-       flash[:error] = "You must be an admin to do that."
+     unless current_user.admin? || current_user.moderator?
+       flash[:error] = "You must be an admin or moderator to do that."
        redirect_to topics_path
      end
    end
