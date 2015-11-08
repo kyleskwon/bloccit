@@ -4,6 +4,7 @@ ruby '2.2.1'
  gem 'rails', '4.2.4'
  gem 'bootstrap-sass'
  gem 'bcrypt'
+ gem 'figaro', '1.0'
 
  group :production do
    gem 'pg'
@@ -29,4 +30,3 @@ ruby '2.2.1'
  gem 'jquery-rails'
  # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
  gem 'turbolinks'
- gem 'figaro', '1.0'
