@@ -22,6 +22,7 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+
   describe "POST create" do
     it "returns http success" do
       post :create, user: new_user_attributes
@@ -59,6 +60,7 @@ RSpec.describe UsersController, type: :controller do
        expect(session[:user_id]).to eq assigns(:user).id
     end
   end
+
 
   describe "not signed in" do
     let(:factory_user) { create(:user) }
