@@ -1,0 +1,6 @@
+New post called <%= @post.title %> created!
+<%= "=" * (@post.title.length + 12) %>
+
+you will be notified of any comments or favorites.
+
+Visit online at: <%= topic_post_url(@post.topic, @post) %>

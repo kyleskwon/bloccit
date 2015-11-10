@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+   </head>
+   <body>
+     <h1><%= @post.title %> added!</h1>
+     <p>You have just added a new post. You will be notified whenever someone favorites or comments on it.</p>
+     <p>
+       <%= link_to "View Post on site", topic_post_url(@post.topic, @post) %>
+     </p>
+   </body>
+ </html>
