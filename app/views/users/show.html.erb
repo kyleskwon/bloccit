@@ -19,8 +19,15 @@
    </div>
  </div>
 
+# if user is logged in...
  <h2>Posts</h2>
  <%= render @user.posts %>
 
  <h2>Comments</h2>
  <%= render @user.comments %>
+
+# display gravatar, number of votes, number of comments
+#<%= render (@user.posts.favorite.count, 'favorite posts') %>,
+
+# if user is not logged in
+# "{user.name} has not submitted any posts yet."

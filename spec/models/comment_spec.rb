@@ -6,7 +6,7 @@ include RandomData
     let(:topic) { create(:topic) }
     let(:user) { create(:user) }
     let(:post) { create(:post) }
-    let(:comment) { Comment.create!(body: 'Comment Body', post: post, user: user) }
+    let(:comment) { create(:comment) }
 
     it { should belong_to(:post) }
     it { should belong_to(:user) }
