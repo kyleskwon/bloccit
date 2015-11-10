@@ -72,7 +72,6 @@ RSpec.describe User, type: :model do
          expect(user.admin?).to be_truthy
        end
      end
-
   end
 
 
@@ -95,20 +94,20 @@ RSpec.describe User, type: :model do
   end
 
   describe "#favorite_for(post)" do
-     before do
-       topic = Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph)
-       @post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
-     end
+       before do
+         topic = Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph)
+         @post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
+       end
 
-     it "returns `nil` if the user has not favorited the post" do
-       expect(user.favorite_for(@post)).to be_nil
-     end
+       it "returns `nil` if the user has not favorited the post" do
+         expect(user.favorite_for(@post)).to be_nil
+       end
 
-     it "returns the appropriate favorite if it exists" do
-       favorite = user.favorites.where(post: @post).create
-       expect(user.favorite_for(@post)).to eq(favorite)
+       it "returns the appropriate favorite if it exists" do
+         favorite = user.favorites.where(post: @post).create
+         expect(user.favorite_for(@post)).to eq(favorite)
+       end
      end
-   end
 
    describe ".avatar_url" do
 
@@ -119,4 +118,4 @@ RSpec.describe User, type: :model do
        expect(User.avatar_url(known_user, 48)).to eq(expected_gravatar)
      end
    end
-end
+ end
