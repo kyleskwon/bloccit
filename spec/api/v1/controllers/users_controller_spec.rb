@@ -134,12 +134,11 @@ require 'rails_helper'
      describe "POST create" do
        context "with valid attributes" do
          before do
- # #11
+
            @new_user = build(:user)
            post :create, user: { name: @new_user.name, email: @new_user.email, password: @new_user.password, role: "admin" }
          end
 
- # #12
          it "returns http success" do
            expect(response).to have_http_status(:success)
          end
@@ -156,7 +155,6 @@ require 'rails_helper'
          end
        end
 
- # #13
        context "with invalid attributes" do
          before do
            post :create, user: { name: "", email: "bademail@", password: "short" }

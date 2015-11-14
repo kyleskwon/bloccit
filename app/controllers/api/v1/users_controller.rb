@@ -17,7 +17,6 @@ class Api::V1::UsersController < Api::V1::BaseController
    def update
      user = User.find(params[:id])
 
- # #9
      if user.update_attributes(user_params)
        render json: user.to_json, status: 200
      else
@@ -28,7 +27,6 @@ class Api::V1::UsersController < Api::V1::BaseController
    def create
      user = User.new(user_params)
 
- # #14
      if user.valid?
        user.save!
        render json: user.to_json, status: 201
@@ -38,7 +36,7 @@ class Api::V1::UsersController < Api::V1::BaseController
    end
 
    private
- # #10
+
    def user_params
      params.require(:user).permit(:name, :email, :password, :role)
    end
