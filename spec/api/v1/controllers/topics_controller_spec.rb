@@ -25,6 +25,11 @@ require 'rails_helper'
        expect(response).to have_http_status(401)
      end
 
+     it "POST create returns http unauthenticated" do
+       post :create, post: {name: "Post Name", description: "Post Description"}
+       expect(response).to have_http_status(401)
+     end
+
      it "DELETE destroy returns http unauthenticated" do
        delete :destroy, id: my_topic.id
        expect(response).to have_http_status(401)
@@ -54,6 +59,11 @@ require 'rails_helper'
 
      it "POST create returns http forbidden" do
        post :create, topic: {name: "Topic Name", description: "Topic Description"}
+       expect(response).to have_http_status(403)
+     end
+
+     it "POST create returns http forbidden" do
+       post :create, post: {name: "Post Name", description: "Post Description"}
        expect(response).to have_http_status(403)
      end
 
@@ -103,6 +113,24 @@ require 'rails_helper'
          hashed_json = JSON.parse(response.body)
          expect(@new_topic.name).to eq hashed_json["name"]
          expect(@new_topic.description).to eq hashed_json["description"]
+       end
+     end
+
+     describe "POST create" do
+       before { post :create, post: {name: @new_post.name, description: @new_post.description} }
+
+       it "returns http success" do
+         expect(response).to have_http_status(:success)
+       end
+
+       it "returns json content type" do
+         expect(response.content_type).to eq 'application/json'
+       end
+
+       it "creates a post with the correct attributes" do
+         hashed_json = JSON.parse(response.body)
+         expect(@new_post.name).to eq hashed_json["name"]
+         expect(@new_post.description).to eq hashed_json["description"]
        end
      end
 
