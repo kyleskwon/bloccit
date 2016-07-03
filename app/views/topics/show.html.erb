@@ -18,12 +18,13 @@
 
     <% if current_user %>
       <div>
-        <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
+          <%= link_to "New Tidbit", new_topic_post_path(@topic), class: 'btn btn-success' %>
       </div>
     <% end %>
 
     <br>
-
+    
+      <h2>Tidbits</h2>
     <% @topic.posts.each do |post| %>
       <div class="media">
         <%= render partial: 'votes/voter', locals: { post: post } %>
@@ -34,7 +35,7 @@
           </h4>
           <small>
             submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
-            <%= post.comments.count %> Tidbits
+            Comments: <%= post.comments.count %>
           </small>
         </div>
       </div>

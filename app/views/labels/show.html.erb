@@ -2,18 +2,22 @@
     <div class="col-md-8">
       <h1><%= @label.name %></h1>
 
-      <h3>Businesses:</h3> 
+      <h3>Topics:</h3> 
       <% @label.topics.each do |topic| %>
         <div>
           <%= link_to topic.name, topic %>
         </div>
       <% end %>
+        <br>
+        <%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %>
+<!--
 
-      <h3>Tidbits:</h3> 
+      <h3>Related Tidbits:</h3> 
       <% @label.posts.each do |post| %>
         <div>
           <%= link_to post.title, topic_post_path(post.topic, post) %>
         </div>
       <% end %>
+-->
     </div>
   </div>
