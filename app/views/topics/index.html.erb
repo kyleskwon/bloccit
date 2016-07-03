@@ -9,12 +9,12 @@
             <%= link_to topic.name, topic %>
           </h4>
           <small>
-            <%= topic.description %>
+              <%= topic.description %>
           </small>
         </div>
       </div>
-      <% end %>
-    </div>
+    <% end %>
+  </div>
     <!-- <% if user_is_authorized_for_topics? %> -->
     <div class="col-md-4">
       <%= link_to "New Category", new_topic_path, class: 'btn btn-success' %>

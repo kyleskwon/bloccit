@@ -1,0 +1,14 @@
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <% @label.each do |label| %>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        <%= link_to label.name, label %>
+                    </h4>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
