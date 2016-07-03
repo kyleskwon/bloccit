@@ -1,15 +1,22 @@
-<br>
+<h1>Categories</h1>
+  <br>
 <div class="row">
-    <div class="col-md-8">
-        <% @label.each do |label| %>
-        <div class="media">
-            <div class="media-body">
-                <h4 class="media-heading">
-                    <%= link_to label.name, label %>
-                </h4>
-            </div>
+  <div class="col-md-8">
+      <% @label.each do |label| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+              <%= link_to label.name, label %>
+          </h4>
         </div>
-        <% end %>
+      </div>
+    <% end %>
+  </div>
+    <!-- <% if user_is_authorized_for_topics? %> -->
+    <div class="col-md-4">
+      <%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %>
     </div>
-</div>
-<%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %>
+    <% end %>
+  </div>
+<br>
+<br>
