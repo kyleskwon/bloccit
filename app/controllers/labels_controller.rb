@@ -1,5 +1,4 @@
 class LabelsController < ApplicationController
-    
   def index
       @label = Label.all
   end
