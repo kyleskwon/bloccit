@@ -30,12 +30,12 @@
         <%= render partial: 'votes/voter', locals: { post: post } %>
         <div class="media-body">
           <h4 class="media-heading">
-            <%= link_to post.title, topic_post_path(@topic, post) %>
-            <%= render partial: "labels/list", locals: { labels: post.labels } %>
+              <%= post.title %>
+<!--            <%= render partial: "labels/list", locals: { labels: post.labels } %>-->
           </h4>
-          <small>
-            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
-            Comments: <%= post.comments.count %>
+          <small class="smaller">
+            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %>
+<!--            Comments: <%= post.comments.count %>-->
           </small>
         </div>
       </div>
