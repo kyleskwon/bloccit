@@ -24,20 +24,21 @@
 
     <br>
     
-      <h2 class="text-center">Tidbits</h2>
+      <h1 class="text-center">Tidbits</h1>
+      <br>
       <hr>
       <div class="text-center">
         <% @topic.posts.each do |post| %>
       <div class="media">
         <%= render partial: 'votes/voter', locals: { post: post } %>
         <div class="media-body">
-          <h4 class="media-heading">
+          <div class="tidbit">
               <%= post.title %>
 <!--            <%= render partial: "labels/list", locals: { labels: post.labels } %>-->
-          </h4>
+          </div>
           <small class="smaller">
               submitted <%= time_ago_in_words(post.created_at) %> ago 
-<!--              by <%= post.user %>-->
+              <!--              by <%= post.user %>-->
 <!--            Comments: <%= post.comments.count %>-->
           </small>
         </div>
