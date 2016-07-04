@@ -1,12 +1,14 @@
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12 text-center">
+        <br>
+        <br>
       <h1><%= @label.name %></h1>
-
-      <h3>Topics:</h3> 
+        <br>
       <% @label.topics.each do |topic| %>
-        <div>
+        <h3 class="topics">
           <%= link_to topic.name, topic %>
-        </div>
+        </h3>
+        <br>
       <% end %>
 <br>
 <!-- <% if user_is_authorized_for_topics? %> -->

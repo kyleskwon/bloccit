@@ -22,7 +22,7 @@
 
 
 body {
-  font: 400 15px Lato, sans-serif;
+  font: 400 15px Quicksand, sans-serif;
   line-height: 1.8;
   color: darkblue;
 }
@@ -33,6 +33,12 @@ h2 {
     color: white;
     font-weight: 600;
     margin-bottom: 30px;
+}
+
+.topics {
+    padding: 40px 0px;
+    border: solid;
+    margin: 0px 400px;
 }
 
 h4 {
@@ -55,7 +61,7 @@ h5 {
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: Raleway, sans-serif;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -79,7 +85,8 @@ h5 {
 .jumbotron {
     background: whitesmoke; /* Orange */
     color: darkblue;
-    font-family: Montserrat, sans-serif;
+    font-style: bold;
+//    font-family: Montserrat, sans-serif;
 }
 
 .logo-small {
@@ -140,7 +147,6 @@ h5 {
     margin-left: 300px;
     margin-right: 300px;
 }
-
 
 .media-heading {
     font-size: 30px;
