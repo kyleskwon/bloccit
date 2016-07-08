@@ -1,7 +1,6 @@
 <div class="form-group">
   <%= f.label :labels %>
-  <%= f.text_field :labels,
+  <%= f.select :labels, ['Culture', 'Places', 'Living', 'Restaurants & Commerce'],
                     class: 'form-control',
-placeholder: 'Enter "Culture" "Places" "Living" or "Restaurants & Commerce"',
                     value: labels.map(&:name).join(', ') %>
 </div>

@@ -22,9 +22,9 @@
 
 
 body {
-  font: 400 15px Quicksand, sans-serif;
-  line-height: 1.8;
-  color: darkblue;
+    font: 400 15px Quicksand, sans-serif;
+    line-height: 1.8;
+    color: darkblue;
 }
 
 h2 {
@@ -49,7 +49,7 @@ h4 {
 }
 
 h5 {
-  color: black;
+    color: black;
 }
 
 .navbar {
@@ -79,7 +79,7 @@ h5 {
 }
 
 .user-info {
-  margin-top: 9px;
+    margin-top: 9px;
 }
 
 .jumbotron {
@@ -139,6 +139,10 @@ h5 {
 
 .text-center {
     align-content: center;
+}
+
+.buttons-float-right {
+    float: right;
 }
 
 .category {
