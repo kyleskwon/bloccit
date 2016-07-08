@@ -37,7 +37,9 @@
 <div class="container">
   <ul class="nav nav-tabs">
     <li><%= link_to "Home", root_path %></li>
+    <% if current_user %>
       <li><%= link_to "Categories", labels_path %></li>
+    <% end %>
     <li><%= link_to "About", about_path %></li>
 
     <div class="pull-right user-info">

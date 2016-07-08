@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    resources :labels, only: [:index, :show]
+    resources :labels, only: [:index, :show, :destroy]
 
   resources :topics do
     resources :posts, except: [:index]

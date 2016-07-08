@@ -7,6 +7,11 @@
             <div class="media-body">
               <h4 class="media-heading">
                   <%= link_to label.name, label %>
+                  <% if current_user.admin? %>
+                    <%= link_to "Delete Category", label, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this category?' } %>
+                  <% else %>
+                    <p></p>
+                  <% end %>
               </h4>
             </div>
           </div>

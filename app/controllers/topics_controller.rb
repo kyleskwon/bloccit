@@ -56,7 +56,7 @@ class TopicsController < ApplicationController
      @topic = Topic.find(params[:id])
 
      if @topic.destroy
-       flash[:notice] = "\"#{@topic.name}\" was deleted successfully."
+       flash[:notice] = "\"#{@topic.name}\" was successfully deleted."
        redirect_to labels_path
      else
        flash[:error] = "There was an error deleting the topic."
