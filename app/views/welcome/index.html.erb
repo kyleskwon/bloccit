@@ -1,12 +1,8 @@
 <br>
+
 <div class="jumbotron text-center">
   <h1>SeoulTidbits</h1>
   <p>SparkNotes for global travel.</p>
-  <!-- <form class="form-inline">
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-link">Subscribe</button>
-  </form> -->
-
   <p>
     <% unless current_user %>
       <%= link_to "Sign In", new_session_path %> |
@@ -50,7 +46,9 @@
     <br><br>
 </div>
 
-<div class="text-center"><h2>Featured Tidbits</h2></div>
+<div class="text-center">
+  <h2>Featured Tidbits</h2>
+</div>
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -66,11 +64,6 @@
     <div class="item">
       <h4>"The seats next to the doors to other cars are for elderly, pregnant, or injured people only."<br><span style="font-style:normal;">Seoul Subway, Living</span></h4>
     </div>
-<!--
-    <div class="item">
-      <h4>"How did I live without this before?"<br><span style="font-style:normal;">Helen Lee, Actress, CJ Entertainment</span></h4>
-    </div>
--->
   </div>
 
   <!-- Left and right controls -->
@@ -83,10 +76,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<br>
-
-<!--<div id="googleMap" style="height:300px;width:100%;"></div>-->
 
 <br>
 

@@ -64,6 +64,20 @@ h5 {
 .carousel-indicators li.active {
     background-color: #80aaff;
 }
+@media (max-width: 767px) {
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: white;
+  }
+
+  .carousel-indicators li {
+      border-color: #80aaff;
+  }
+
+  .carousel-indicators li.active {
+      background-color: #80aaff;
+  }
+}
 
 .category {
     padding: 30px 0px;
@@ -111,10 +125,9 @@ h5 {
 }
 
 .jumbotron {
-    background: whitesmoke; /* Orange */
+    background: whitesmoke;
     color: darkblue;
     font-style: bold;
-//    font-family: Montserrat, sans-serif;
 }
 
 .label-header {
@@ -169,8 +182,12 @@ h5 {
     align-content: center;
 }
 
+.tidbit-header {
+  font-size: 3em;
+}
+
 .tidbit {
-    font-size: 23px;
+    font-size: 2em;
 }
 
 .topics {
@@ -182,6 +199,33 @@ h5 {
 .topic-header {
     padding-top: 160px;
     font-size: 4em;
+}
+@media (max-width: 500px) {
+  .topic-header {
+      padding-top: 40px;
+      font-size: 2.5em;
+  }
+
+  .tidbit-header {
+    font-size: 2em;
+  }
+
+  .tidbit {
+      font-size: 1.25em;
+  }
+}
+@media (min-width: 501px) and (max-width: 992px) {
+  .topic-header {
+      padding-top: 80px;
+      font-size: 3em;
+  }
+  .tidbit-header {
+    font-size: 2em;
+  }
+
+  .tidbit {
+      font-size: 1.5em;
+  }
 }
 
 .user-info {

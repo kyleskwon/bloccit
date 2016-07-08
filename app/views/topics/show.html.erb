@@ -19,11 +19,15 @@
       <% end %>
     </div>
   </div>
+</div>
     <br>
+<div class="row">
   <div class="col-md-12">
-    <h1 class="text-center">Tidbits</h1>
+    <div class="tidbit-header text-center">Tidbits</div>
   </div>
-<div class="col-md-12">
+</div>
+<div class="row">
+  <div class="col-md-12">
   <% if current_user %>
     <div>
         <%= link_to "New Tidbit", new_topic_post_path(@topic), class: 'btn btn-success' %>
