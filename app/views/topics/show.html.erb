@@ -41,7 +41,11 @@
           <%= render partial: 'votes/voter', locals: { post: post } %>
           <div class="media-body">
             <div class="tidbit">
+              <% if current_user %>
                 <%= link_to post.title, topic_post_path(@topic, post) %>
+              <% else %>
+                <%= post.title %>
+              <% end %>
   <!--            <%= render partial: "labels/list", locals: { labels: post.labels } %>-->
             </div>
             <small class="smaller">
